@@ -62,6 +62,7 @@ class Book extends React.Component {
     );
   }
 handleSubmit(event) {
+  alert("Thank you");
 }
 onNameChange(event) {
 	this.setState({name: event.target.value})

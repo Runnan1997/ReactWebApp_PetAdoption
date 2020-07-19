@@ -4,6 +4,9 @@ import { Icon } from 'semantic-ui-react';
 
 
 const Help = () => {
+    function submitClick(){
+        alert('Thank you!');
+    }
     return(
         <div className="container">
             <h4 className="left">Help</h4>
@@ -37,7 +40,7 @@ const Help = () => {
                 <Input type="textarea" name="text" id="exampleText" placeholder="Please enter your comments..."/>
             </FormGroup>
             <br></br>
-            <Button>Submit</Button>
+            <Button onClick={submitClick}>Submit</Button>
             <br></br>
             <br></br>
             </Form>

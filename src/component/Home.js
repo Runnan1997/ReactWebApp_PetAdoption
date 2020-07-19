@@ -30,7 +30,7 @@ const Home = () => {
             <div className="container">
               <button onClick={() => setLocale(LOCALES.ENGLISH)}>English</button>
               <button onClick={() => setLocale(LOCALES.CHINESE)}>Chinese</button>
-        </div>
+            </div>
         </div>
         </I18nProvider>
     )
