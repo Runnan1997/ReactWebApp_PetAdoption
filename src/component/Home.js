@@ -1,30 +1,38 @@
-import React from 'react'
-import { Icon } from 'semantic-ui-react';
+import React, {useState} from 'react'
+import translate from '../i18n/translate';
+import {I18nProvider, LOCALES} from '../i18n';
+
 
 const Home = () => {
+    const[locale, setLocale] = useState(LOCALES.ENGLISH);
     return(
+        <I18nProvider locale={locale}>
         <div className="container">
             <br></br>
-            <Icon name='paw' size='big' /><h4 className="left">About Us</h4>
+            <h4 className="left">{translate('about')}</h4>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            <p>Cute pet is a non-profit, community-based organization and a registered charitable organization.This organization enforced the new animal protection laws and focused on bettering the lives of nelected pets by lobbying for legislation to provide for foster homes.</p>
+            <p>{translate('cute')}</p>
 
-            <Icon name='paw' size='big' />
-            <h4 className="left">Adoption Process</h4>
+            <h4 className="left">{translate('ap')}</h4>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            <p>Step1: Click the Adoption button on the top right to browse all categories of pets</p>
-            <p>Step2: Choose the type of pets that you are interested in</p>
-            <p>Step3: Browse all our pets, click button or picture to reserve an appointment</p>
-            <p>Step4: Please click Help for more information</p>
+            <p>{translate('step1')}</p>
+            <p>{translate('step2')}</p>
+            <p>{translate('step3')}</p>
+            <p>{translate('step4')}</p>
             <br></br>
             <br></br>
+            <div className="container">
+              <button onClick={() => setLocale(LOCALES.ENGLISH)}>English</button>
+              <button onClick={() => setLocale(LOCALES.CHINESE)}>Chinese</button>
         </div>
+        </div>
+        </I18nProvider>
     )
 }
 

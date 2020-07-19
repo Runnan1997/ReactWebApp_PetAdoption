@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { AgGridReact } from 'ag-grid-react';
+import React, { Component, useState } from 'react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import Navbar from './component/Navbar'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route} from 'react-router-dom'
 import Home from './component/Home'
 import Adoption from './component/Adoption'
 import Help from './component/Help';
@@ -13,6 +12,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import history from './component/history';
+
+
 
 const photos = [
   {
@@ -28,7 +29,10 @@ const photos = [
     url: 'https://images.ctfassets.net/cnu0m8re1exe/7sLmeD1tcL4UoIm0BjNaLh/22a9f42a4315361db96470f50b178e86/Dog-and-Cat.jpg?w=650&h=433&fit=fill'
   }
 ]
+
+
 class App extends Component {
+
   render(){
     const settings = {
       dots: true,
@@ -38,12 +42,12 @@ class App extends Component {
       arrows:true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      className: "slides"
-    };
+      className: "slides"};
+
     return (
       <BrowserRouter history={history}>
         <div className="App">
-          <Navbar />
+        <Navbar />
           <Slider {...settings}>
           {photos.map((photo) => {
             return(
@@ -65,4 +69,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import { Icon } from 'semantic-ui-react';
+import translate from '../i18n/translate';
 
 const Navbar = () => {
     return (
@@ -13,7 +14,7 @@ const Navbar = () => {
                     <li><Link to="/adoption">Adoption</Link></li>
                     <li><Link to="/help">Help</Link></li>
                 </ul>
-            </div>
+            </div> 
         </nav>
     )
 }
