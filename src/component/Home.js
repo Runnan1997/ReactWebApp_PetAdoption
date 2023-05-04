@@ -28,9 +28,10 @@ const Home = () => {
             <br></br>
             <br></br>
             <div className="container">
-              <button onClick={() => setLocale(LOCALES.ENGLISH)}>English</button>
-              <button onClick={() => setLocale(LOCALES.CHINESE)}>Chinese</button>
+              <button style={{width:"250px", height:"30px", marginRight:"200px"}} onClick={() => setLocale(LOCALES.ENGLISH)}>English</button>
+              <button style={{width:"250px", height:"30px"}} onClick={() => setLocale(LOCALES.CHINESE)}>Chinese</button>
             </div>
+            <br></br>
         </div>
         </I18nProvider>
     )

@@ -25,7 +25,7 @@ const pets2 =[
         firstname: 'Mary',
         url: 'https://specials-images.forbesimg.com/imageserve/5de6f2d8c283810006a3947f/960x0.jpg?fit=scale',
         type:'cat',
-        des:'Mary was literally thrown out of an apartment October/15 and luckily our foster lady lives next door and so we told her to bring her in which she did in mid November.It was soon determined that Mary was pregnant and she delivered her 2 kittens (now adopted) Jan.11/16.Laila is about 2.5 yrs old, gorgeous semi-long hair CALICO.',
+        des:'Mary was literally thrown out of an apartment October/15 and luckily our foster lady lives next door and so we told her to bring her in which she did in mid November.It was soon determined that Mary was pregnant and she delivered her 2 kittens.',
       },
       {
         id: 'd',
@@ -48,7 +48,7 @@ const pets3 =[
         firstname: 'Yoshi',
         url: 'https://i2.wp.com/www.paws.org/wp-content/uploads/2019/10/Alphie_cat_29864612_101115_profile_MB-2.jpg?fit=1024%2C583&ssl=1',
         type:'cat',
-        des:'Yoshi is a shining example of how feral kittens can become domesticated. It took about 9 months and now he is actually the hoarder of any attention he sees, he craves it and what more could you want. ',
+        des:'Yoshi is a shining example of how feral kittens can become domesticated. It took about 9 months and now he is actually the hoarder of any attention he sees, he craves it and what more could you want.',
       },
 ];
 
@@ -77,48 +77,59 @@ class Search extends Component{
         const {term, pets} = this.state;
         return(
             <Container>
-            <Row>
             <div className="Search">
             <br></br>
             <h4>Adoption</h4>
             <form>
                 <input type="text" onChange={this.searchHandler} value={term} placeholder="Search Pet Type"></input>
             </form>
+            </div>
+            <div>
+            <Row>
             <Col>
+            <br />
                 {
                     pets1.filter(searchingFor(term)).map(wanted =>
                             <div key={wanted.id}>
                             <div><img width="250px" height="250px" src={wanted.url}/></div>
-                            <div>{wanted.firstname}</div>
-                            <div><button><Link to="/book">Interested in Adoption</Link></button></div>
+                            <div><p style={{ fontWeight: 'bold', fontSize:25 }}>{wanted.firstname}</p></div>
+                            <textarea readOnly style={{width:"250px", height:"150px", border:"None", outline:"None", resize:"none"}}>{wanted.des}</textarea>
+                            <div><button style={{ width:"250px", height:"30px"}}><Link to="/book">Interested in Adoption</Link></button></div>
+                            <br />
                             </div>
                         )
                 }
             </Col>
             <Col>
+            <br />
                 {
                     pets2.filter(searchingFor(term)).map(wanted =>
                             <div key={wanted.id}>
                             <div><img width="250px" height="250px" src={wanted.url}/></div>
-                            <div>{wanted.firstname}</div>
-                            <div><button><Link to="/book">Interested in Adoption</Link></button></div>
+                            <div><p style={{ fontWeight: 'bold', fontSize:25 }}>{wanted.firstname}</p></div>
+                            <textarea readOnly style={{width:"250px", height:"150px", border:"None", outline:"None", resize:"none"}}>{wanted.des}</textarea>
+                            <div><button style={{ width:"250px", height:"30px"}}><Link to="/book">Interested in Adoption</Link></button></div>
+                            <br />
                             </div>
                         )
                 }
             </Col>
             <Col>
+            <br />
                 {
                     pets3.filter(searchingFor(term)).map(wanted =>
                             <div key={wanted.id}>
                             <div><img width="250px" height="250px" src={wanted.url}/></div>
-                            <div>{wanted.firstname}</div>
-                            <div><button><Link to="/book">Interested in Adoption</Link></button></div>
+                            <div><p style={{ fontWeight: 'bold', fontSize:25 }}>{wanted.firstname}</p></div>
+                            <textarea readOnly style={{width:"250px", height:"150px", border:"None", outline:"None", resize:"none"}}>{wanted.des}</textarea>
+                            <div><button style={{ width:"250px", height:"30px"}} ><Link to="/book">Interested in Adoption</Link></button></div>
+                            <br />
                             </div>
                         )
                 }
             </Col>
-            </div>
             </Row>
+            </div>
             </Container>
         )
     }

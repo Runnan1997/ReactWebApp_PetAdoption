@@ -18,15 +18,15 @@ import history from './component/history';
 const photos = [
   {
     name: 'photp 1',
-    url: 'https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_touching_human_hand_other/1800x1200_cat_touching_human_hand_other.jpg'
+    url: 'https://www.fetchpetcare.com/wp-content/uploads/2016/11/dreamstime_xxl_87694876.jpg'
   },
   {
     name: 'photp 2',
-    url: 'https://images.theconversation.com/files/243451/original/file-20181101-83629-pq6hc7.jpg?ixlib=rb-1.1.0&rect=48%2C409%2C5358%2C2679&q=45&auto=format&w=668&h=324&fit=crop'
+    url: 'https://www.uah.edu/images/administrative/human-resources/charger_fit/cutest-pet-header.jpg'
   },
   {
     name: 'photp 3',
-    url: 'https://images.ctfassets.net/cnu0m8re1exe/7sLmeD1tcL4UoIm0BjNaLh/22a9f42a4315361db96470f50b178e86/Dog-and-Cat.jpg?w=650&h=433&fit=fill'
+    url: 'https://i0.wp.com/almosthomeanimals.org/wp-content/uploads/2013/06/header.jpg?ssl=1'
   }
 ]
 

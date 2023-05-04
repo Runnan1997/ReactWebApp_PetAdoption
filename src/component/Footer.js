@@ -9,8 +9,7 @@ const Footer = () => {
                 <Icon name='home' size='big' />
                     <a className="brand-logo">Our Location</a>
                     <ul className="right">
-                        <li>169 Lees Ave, Ottawa ON</li>
-                        <li>K1S 5P3</li>    
+                        <li>169 Lees Ave, Ottawa ON</li>   
                     </ul>
                 </div>
             </div>
