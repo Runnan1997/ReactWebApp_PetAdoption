@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It is a pet adoption website that allows users to:
+1. Switch languages (English and Chinese)
+2. Search for dogs or cats to filter results
+3. Book appointment for adoption with name, email and date entere
+
 ## Available Scripts
 
 In the project directory, you can run:
